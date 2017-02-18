@@ -54,7 +54,7 @@
   become_user: "{{ edxapp_user }}"
   environment:
     GIT_SSH: "{{ edxapp_git_ssh }}"
- # register: edxapp_platform_checkout
+  register: edxapp_platform_checkout
   tags:
     - install
     - install:code
