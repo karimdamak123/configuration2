@@ -9,7 +9,8 @@
     CERTS_DOWNLOAD_URL: 'http://192.168.33.10:18090'
     CERTS_VERIFY_URL: 'http://192.168.33.10:18090'
     # used for releases
-    edx_platform_version: '{{ OPENEDX_RELEASE | default("master") }}'
+    #edx_platform_version: '{{ OPENEDX_RELEASE | default("master") }}'
+    edx_platform_version: '{{ "master" | default("master") }}'
     certs_version: '{{ OPENEDX_RELEASE | default("master") }}'
     forum_version: '{{ OPENEDX_RELEASE | default("master") }}'
     xqueue_version: '{{ OPENEDX_RELEASE | default("master") }}'
