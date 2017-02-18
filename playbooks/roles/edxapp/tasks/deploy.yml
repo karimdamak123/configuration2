@@ -52,12 +52,12 @@
     force: yes
     accept_hostkey: yes
   become_user: "{{ edxapp_user }}"
-  environment:
-    GIT_SSH: "{{ edxapp_git_ssh }}"
-  register: edxapp_platform_checkout
-  tags:
-    - install
-    - install:code
+  #environment:
+    #GIT_SSH: "{{ edxapp_git_ssh }}"
+  #register: edxapp_platform_checkout
+  #tags:
+  #  - install
+  #  - install:code
 
 - name: git clean after checking out edx-platform
   shell: cd {{ edxapp_code_dir }} && git clean -xdf
