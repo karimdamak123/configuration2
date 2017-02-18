@@ -6,6 +6,8 @@
   ec2_tag:
     resource: "{{ ansible_ec2_instance_id }}"
     region: "{{ ansible_ec2_placement_region }}"
+    tags:
+      "version:edx_platform" : "{{ edx_platform_repo }} {{ edxapp_platform_checkout.after|truncate(7,True,'') }}"
   when: edxapp_platform_checkout.after is defined
 
 - name: tag instance with edxapp theme version
