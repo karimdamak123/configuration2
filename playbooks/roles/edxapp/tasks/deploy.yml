@@ -44,7 +44,7 @@
     - install:base
 
 # Do A Checkout
-- name: checkout edx-platform repo into {{ edxapp_code_dir }} "{{ edx_platform_version }}" 
+- name: checkout edx-platform repo into {{ edxapp_code_dir }}
   git_2_0_1:
     dest: "{{ edxapp_code_dir }}"
     repo: "{{ edx_platform_repo }}"
